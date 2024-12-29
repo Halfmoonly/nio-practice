@@ -1,6 +1,7 @@
-package c1ByteBuffer;
+package c1FileChannel;
 
 import lombok.extern.slf4j.Slf4j;
+import utils.Dictionaries;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -9,14 +10,13 @@ import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
 
 @Slf4j
-public class TestByteBuffer {
+public class Test01FileChannelRead {
 
     public static void main(String[] args) {
         System.out.println((new File("./")).getAbsolutePath());
         // FileChannel
         // 1. 输入输出流， 2. RandomAccessFile
-//        try (FileChannel channel = new FileInputStream(Dictionaries.pathRoot+ "data.txt").getChannel()) {
-        try (FileChannel channel = new FileInputStream("E:\\github\\nio-practice\\data.txt").getChannel()) {
+        try (FileChannel channel = new FileInputStream(Dictionaries.pathRoot + "\\data.txt").getChannel()) {
             // 准备缓冲区
             ByteBuffer buffer = ByteBuffer.allocate(10);
             while(true) {

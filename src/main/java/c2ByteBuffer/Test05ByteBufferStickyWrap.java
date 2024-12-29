@@ -1,11 +1,11 @@
-package c1ByteBuffer;
+package c2ByteBuffer;
 
 import java.nio.ByteBuffer;
 
 import static utils.ByteBufferUtil.debugAll;
 
 
-public class TestByteBufferStickyWrap {
+public class Test05ByteBufferStickyWrap {
     public static void main(String[] args) {
          /*
          网络上有多条数据发送给服务端，数据之间使用 \n 进行分隔

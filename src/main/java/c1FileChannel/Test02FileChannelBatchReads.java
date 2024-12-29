@@ -1,4 +1,4 @@
-package c1ByteBuffer;
+package c1FileChannel;
 
 import utils.Dictionaries;
 
@@ -9,9 +9,9 @@ import java.nio.channels.FileChannel;
 
 import static utils.ByteBufferUtil.debugAll;
 
-public class TestScatteringReads {
+public class Test02FileChannelBatchReads {
     public static void main(String[] args) {
-        try (FileChannel channel = new RandomAccessFile(Dictionaries.pathRoot+"words.txt", "r").getChannel()) {
+        try (FileChannel channel = new RandomAccessFile(Dictionaries.pathRoot+ "\\words.txt", "r").getChannel()) {
             ByteBuffer b1 = ByteBuffer.allocate(3);
             ByteBuffer b2 = ByteBuffer.allocate(3);
             ByteBuffer b3 = ByteBuffer.allocate(5);

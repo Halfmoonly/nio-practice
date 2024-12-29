@@ -1,10 +1,10 @@
-package c1ByteBuffer;
+package c2ByteBuffer;
 
 import java.nio.ByteBuffer;
 
 import static utils.ByteBufferUtil.debugAll;
 
-public class TestByteBufferApiReadWrite {
+public class Test02ByteBufferApiReadWrite {
     public static void main(String[] args) {
         ByteBuffer buffer = ByteBuffer.allocate(10);
         buffer.put((byte) 0x61); // 'a'
